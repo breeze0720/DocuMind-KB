@@ -1,0 +1,26 @@
+# Project Dependencies
+# Install: pip install -r requirements.txt
+
+# LangChain (Agent Framework)
+langchain>=1.2.0
+langchain-openai
+langchain-community
+langgraph
+
+# Web Framework
+fastapi
+uvicorn
+python-multipart
+
+# Environment Variables
+python-dotenv
+
+# Vector Database
+chromadb
+
+# Document Parsing
+pypdf
+docx2txt
+
+# Lightweight Embedding (ONNX Runtime, no sklearn/scipy needed)
+fastembed
