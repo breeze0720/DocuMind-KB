@@ -127,3 +127,7 @@ htmlcov/
 # ---- SQLite 预写日志/共享内存（checkpoint、缓存库）----
 *.db-wal
 *.db-shm
+
+# ---- 本地学习笔记（教学版讲解，不随仓库发布）----
+docs/讲解/
+

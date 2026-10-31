@@ -11,7 +11,7 @@
 
 ```powershell
 cd 01-知识库问答-RAG
-D:\Anaconda\envs\xhu\python.exe main.py
+python main.py
 # 浏览器打开 http://127.0.0.1:8000/
 ```
 
@@ -47,7 +47,7 @@ D:\Anaconda\envs\xhu\python.exe main.py
 分题型 MRR：literal 1.00 / short 0.87 / **paraphrase 0.74**（语义改写是短板 → Roadmap 上 rerank）。
 报告原文：`eval_results/local.md`，结构化结果 `eval_results/latest.json`（重新生成只需跑一次 `eval/eval.py`）。
 （历史对比：曾用百炼 text-embedding-v4 做过一轮 A/B，MRR 0.7833、P50 360ms，结论是本地更好，
-那套双后端代码已删除；数据与取舍见 `docs/讲解/01-embeddings.md` §2.3。）
+那套双后端代码已删除；数据与取舍见 `docs/design/01-embeddings.md` §2.3。）
 
 > 注：语料只有 54 个块，HitRate@5 已饱和，不能证明大规模下同样成立——这是主动承认的局限。指标口径是"前 5 条里出现标注来源 **且** 包含答案关键词"（强命中），回复里另有纯关键词命中作为辅助口径；延迟会随机器负载抖动。
 
@@ -74,7 +74,7 @@ D:\Anaconda\envs\xhu\python.exe main.py
 ├── static/index.html       # 单文件前端：对话 / 检索调试 / 评测 三个页签
 ├── data/corpus/            # 10 份虚构公司文档（6 种格式），可直接演示
 ├── data/_generator/        # 语料生成脚本（可复现）
-├── docs/讲解/              # 逐模块中文讲解（做了什么 / 为什么这么写 / 面试怎么问）
+├── docs/design/            # 设计文档（实现概览 / 设计取舍 / 常见问题）
 ├── models/bge-small-zh-v1.5/  # 本地嵌入模型（ONNX，91MB，不入 git）
 └── eval_results/           # 评测报告 local.md + latest.json（前端读）
 ```
