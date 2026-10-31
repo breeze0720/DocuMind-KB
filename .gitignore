@@ -117,3 +117,13 @@ dist/
 # ============================================
 config.local.*
 *.local
+
+# ---- 本地模型文件（用 download_model.ps1 下载，不入库）----
+models/
+# ---- 测试缓存 ----
+.pytest_cache/
+.coverage
+htmlcov/
+# ---- SQLite 预写日志/共享内存（checkpoint、缓存库）----
+*.db-wal
+*.db-shm

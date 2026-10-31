@@ -1,5 +1,6 @@
 # Project Dependencies
 # Install: pip install -r requirements.txt
+# 国内网络建议加清华镜像：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 
 # LangChain (Agent Framework)
 langchain>=1.2.0
@@ -11,16 +12,30 @@ langgraph
 fastapi
 uvicorn
 python-multipart
+sse-starlette
 
-# Environment Variables
+# Configuration
 python-dotenv
+pydantic-settings
 
 # Vector Database
 chromadb
 
-# Document Parsing
+# Document Parsing (pdf/docx/md/txt/xlsx/pptx/csv)
 pypdf
-docx2txt
+python-docx
+openpyxl
+python-pptx
 
 # Lightweight Embedding (ONNX Runtime, no sklearn/scipy needed)
 fastembed
+
+# Hybrid Retrieval (BM25 + 中文分词)
+jieba
+rank_bm25
+
+# HTTP client（eval.py 调 /api/search 用）
+httpx
+
+# Tests
+pytest
