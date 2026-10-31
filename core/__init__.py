@@ -1,0 +1,1 @@
+"""core 包：RAG 链路的分层实现（loader → splitter → embeddings → store → retriever → citations/agent）。"""
