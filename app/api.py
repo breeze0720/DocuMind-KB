@@ -2,7 +2,7 @@
 app/api.py - 路由汇总
 
 按职责把路由拆成三个文件（documents / qa / system），这里只负责拼装：
-- 单个文件控制在 250 行以内，教学时一个文件讲清一件事；
+- 单个文件控制在 250 行以内，一个文件只负责一类接口；
 - 以后加接口只改对应文件，不用在 500 行的 main.py 里翻半天。
 """
 from fastapi import APIRouter

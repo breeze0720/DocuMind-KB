@@ -3,7 +3,7 @@
 - 生成时间：2026-10-26 18:41:21
 - 服务地址：http://127.0.0.1:8000
 - embedding 后端：bge-small-zh-v1.5（collection: kb_bge_512）
-- 标注集：D:\cxdownload\Agent project\01-知识库问答-RAG\eval\eval_set.jsonl（20 条）
+- 标注集：eval\eval_set.jsonl（20 条）
 - 知识库块数：54
 
 > **天花板效应**：本套语料仅 54 个块、20 道题，检索指标已接近上限；

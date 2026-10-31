@@ -7,7 +7,7 @@ core/splitter.py - 按 token 预算切块（尽量在句末断开）
 原实现按 500「字符」切，中英混排时 500 字符可能是 300~700 token，超长的部分就这样丢了。
 所以这里改成按 token 预算（默认 500 + overlap 50）。
 
-token 怎么数（依据写清楚，教学时能自圆其说）：
+token 怎么数（估算依据）：
 - 不引入 tiktoken（它是 GPT 的 BPE，和 bge 的 WordPiece 词表不是一回事，数出来不代表真实占用）。
 - 中文：bge 用 bert-base-chinese 词表，中文基本按「单字」切，所以 1 个汉字 ≈ 1 token。
 - 英文/数字：WordPiece 会把长单词拆子词，经验上平均 ~4 字符/token，这里按 ceil(len/4) 保守估算。

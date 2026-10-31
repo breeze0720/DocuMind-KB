@@ -1,7 +1,7 @@
 """
 eval/eval.py - 检索效果评测台（HitRate@K / MRR / P95 延迟）
 
-为什么需要这个脚本（也是简历上所有百分比的来源）：
+为什么需要这个脚本（README 与设计文档里的百分比都来自这里）：
 没有基线数字，一切「优化」都无法证明有效。这个脚本逐条调用 /api/search（只测检索，
 不经过大模型，结果可复现、便宜、快），用标注集算三个指标：
 - HitRate@K：Top-K 里至少有一条命中正确答案的题目占比；
@@ -18,12 +18,21 @@ eval/eval.py - 检索效果评测台（HitRate@K / MRR / P95 延迟）
 from __future__ import annotations
 
 import argparse
+import os
 import json
 import sys
 import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+
+def _display_path(path: Path) -> str:
+    """报告里写相对路径，避免把本机绝对路径写进仓库产物。"""
+    try:
+        return os.path.relpath(str(path))
+    except Exception:
+        return str(path)
 
 import httpx
 
@@ -149,7 +158,7 @@ def main() -> int:
         "embedding": active.get("label") or active.get("model") or "bge-small-zh-v1.5",
         "collection": active.get("collection", ""),
         "k": args.k,
-        "eval_set": str(eval_set_path),
+        "eval_set": _display_path(eval_set_path),
         "placeholder": placeholder,
         "chunk_count": chunk_count,
         "metrics": metrics,

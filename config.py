@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     # 为什么只有本地一种：
     #   ① 离线可跑，评测/演示不依赖网络和额度；② 单条 query 向量化约 20ms，比云端快一个量级；
     #   ③ 中文短文本语料上，本地 bge 的排序质量已经够用（评测见 eval_results/local.md）。
-    #   云端 embedding 做过对比后没有采用，理由写在 docs/讲解/01-embeddings.md。
+    #   云端 embedding 做过对比后没有采用，理由写在 docs/design/01-embeddings.md。
     local_embedding_model: str = "BAAI/bge-small-zh-v1.5"
     local_model_dir: Path = BASE_DIR / "models" / "bge-small-zh-v1.5"
     # collection 名：Chroma 建库时维度就固定了，名字里带维度可以避免「换模型后写进旧库」直接报错。

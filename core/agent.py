@@ -96,7 +96,7 @@ def send_email(to: str, subject: str, content: str) -> str:
 # Agent 管理
 # ============================================
 _agent: Any = None
-# 对话历史（进程内）。教学项目够用；多用户/重启不丢需要落库，这里不引入数据库
+# 对话历史（进程内）。当前规模够用；多用户/重启不丢需要落库，这里不引入数据库
 _history: list[dict[str, str]] = []
 _MAX_HISTORY = 40  # 保留最近 20 轮
 

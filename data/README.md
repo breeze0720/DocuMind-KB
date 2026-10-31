@@ -61,7 +61,7 @@ data/
 ## 复现方式
 
 ```powershell
-D:\Anaconda\envs\xhu\python.exe data\_generator\build_corpus.py
+python data/_generator/build_corpus.py
 ```
 
 脚本会重建 `data/corpus/` 下的 10 份文档；PDF 由同名 docx 经 LibreOffice Kit 转换产生（转换后删除中间 docx，目录内无临时文件）。

@@ -5,7 +5,7 @@
   "embedding": "bge-small-zh-v1.5",
   "collection": "kb_bge_512",
   "k": 5,
-  "eval_set": "D:\\cxdownload\\Agent project\\01-知识库问答-RAG\\eval\\eval_set.jsonl",
+  "eval_set": "eval\\eval_set.jsonl",
   "placeholder": false,
   "chunk_count": 54,
   "metrics": {

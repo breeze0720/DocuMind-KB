@@ -2,7 +2,7 @@
 app/routes_qa.py - 检索与问答接口（/api/search、/api/ask、/api/ask/stream、/api/session/reset）
 
 设计要点：
-- /api/search 只做检索、不经过大模型：既是面试时的实时演示入口，也是 eval.py 的评测入口。
+- /api/search 只做检索、不经过大模型：既是演示用的实时入口，也是 eval.py 的评测入口。
 - /api/ask 返回 (answer, sources)：sources 的编号与回答里的 [n] 严格对应。
 - /api/ask/stream 用 SSE：先发 sources 事件，再逐 token 发，最后 done；
   用 sse_starlette 的 EventSourceResponse，它自带心跳和断线处理。
