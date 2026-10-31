@@ -1,0 +1,600 @@
+{
+  "tag": "local",
+  "generated_at": "2026-10-26 18:41:21",
+  "base_url": "http://127.0.0.1:8000",
+  "embedding": "bge-small-zh-v1.5",
+  "collection": "kb_bge_512",
+  "k": 5,
+  "eval_set": "D:\\cxdownload\\Agent project\\01-知识库问答-RAG\\eval\\eval_set.jsonl",
+  "placeholder": false,
+  "chunk_count": 54,
+  "metrics": {
+    "total": 20,
+    "hits": 20,
+    "hit_rate": 1.0,
+    "mrr": 0.9017,
+    "kw_hits": 20,
+    "kw_hit_rate": 1.0,
+    "kw_mrr": 1.0,
+    "p50_latency_ms": 9.0,
+    "p95_latency_ms": 21.5
+  },
+  "by_type": {
+    "literal": {
+      "total": 10,
+      "hits": 10,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "kw_hits": 10,
+      "kw_hit_rate": 1.0,
+      "kw_mrr": 1.0
+    },
+    "paraphrase": {
+      "total": 5,
+      "hits": 5,
+      "hit_rate": 1.0,
+      "mrr": 0.74,
+      "kw_hits": 5,
+      "kw_hit_rate": 1.0,
+      "kw_mrr": 1.0
+    },
+    "short": {
+      "total": 5,
+      "hits": 5,
+      "hit_rate": 1.0,
+      "mrr": 0.8667,
+      "kw_hits": 5,
+      "kw_hit_rate": 1.0,
+      "kw_mrr": 1.0
+    }
+  },
+  "cases": [
+    {
+      "id": "case-1",
+      "question": "转正申请需要提前几个工作日提交？",
+      "sources": [
+        "员工手册.docx"
+      ],
+      "keywords": [
+        "10个工作日"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 14.7,
+      "top_sources": [
+        "员工手册.docx",
+        "IT运维手册.md",
+        "新人培训.pptx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-2",
+      "question": "一线城市住宿标准是每晚多少钱？",
+      "sources": [
+        "报销与差旅制度.pdf"
+      ],
+      "keywords": [
+        "住宿标准",
+        "一线城市"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 21.5,
+      "top_sources": [
+        "报销与差旅制度.pdf",
+        "会议纪要-2026Q3.md",
+        "新人培训.pptx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-3",
+      "question": "P1故障要求多长时间内响应？",
+      "sources": [
+        "IT运维手册.md"
+      ],
+      "keywords": [
+        "15分钟"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 21.7,
+      "top_sources": [
+        "IT运维手册.md",
+        "产品FAQ.txt",
+        "信息安全规范.md"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-4",
+      "question": "云栖智能客服标准版支持多少并发？",
+      "sources": [
+        "产品FAQ.txt"
+      ],
+      "keywords": [
+        "200并发"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 13.9,
+      "top_sources": [
+        "产品FAQ.txt",
+        "新人培训.pptx",
+        "客户案例集.pdf"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-5",
+      "question": "开通超级管理员需要哪两位负责人双签？",
+      "sources": [
+        "权限矩阵.xlsx"
+      ],
+      "keywords": [
+        "周敏",
+        "郑凯"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 11.5,
+      "top_sources": [
+        "权限矩阵.xlsx",
+        "权限矩阵.xlsx",
+        "权限矩阵.xlsx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-6",
+      "question": "第一周任务清单中，Day5需要提交什么？",
+      "sources": [
+        "新人培训.pptx"
+      ],
+      "keywords": [
+        "第一周学习总结"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 10.8,
+      "top_sources": [
+        "新人培训.pptx",
+        "新人培训.pptx",
+        "报销与差旅制度.pdf"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-7",
+      "question": "绩效等级S级的比例上限是多少？",
+      "sources": [
+        "绩效考核办法.docx"
+      ],
+      "keywords": [
+        "5%"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 8.4,
+      "top_sources": [
+        "绩效考核办法.docx",
+        "绩效考核办法.docx",
+        "员工手册.docx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-8",
+      "question": "安全事件必须在多少分钟内上报？",
+      "sources": [
+        "信息安全规范.md"
+      ],
+      "keywords": [
+        "30分钟"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 8.1,
+      "top_sources": [
+        "信息安全规范.md",
+        "新人培训.pptx",
+        "产品FAQ.txt"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-9",
+      "question": "案例中电商客户的机器人解决率是多少？",
+      "sources": [
+        "客户案例集.pdf"
+      ],
+      "keywords": [
+        "82%",
+        "解决率"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 8.1,
+      "top_sources": [
+        "客户案例集.pdf",
+        "客户案例集.pdf",
+        "新人培训.pptx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-10",
+      "question": "2026Q3会议决定v3.3何时发布？",
+      "sources": [
+        "会议纪要-2026Q3.md"
+      ],
+      "keywords": [
+        "2026-11-30"
+      ],
+      "type": "literal",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 10.7,
+      "top_sources": [
+        "会议纪要-2026Q3.md",
+        "会议纪要-2026Q3.md",
+        "产品FAQ.txt"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-11",
+      "question": "员工手册要求辞职提前一个月申请，那么IT部门会在几个工作日内完成账号和设备回收？",
+      "sources": [
+        "IT运维手册.md"
+      ],
+      "keywords": [
+        "3个工作日"
+      ],
+      "type": "paraphrase",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 10.9,
+      "top_sources": [
+        "IT运维手册.md",
+        "员工手册.docx",
+        "权限矩阵.xlsx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-12",
+      "question": "三季度预算会议要求压缩差旅开支，一线城市的住宿标准被下调了吗？",
+      "sources": [
+        "报销与差旅制度.pdf"
+      ],
+      "keywords": [
+        "一线城市",
+        "600"
+      ],
+      "type": "paraphrase",
+      "note": "",
+      "hit": true,
+      "hit_rank": 2,
+      "rr": 0.5,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 2,
+      "latency_ms": 8.8,
+      "top_sources": [
+        "会议纪要-2026Q3.md",
+        "报销与差旅制度.pdf",
+        "会议纪要-2026Q3.md"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-13",
+      "question": "辞职时需要交接哪些内容？",
+      "sources": [
+        "员工手册.docx"
+      ],
+      "keywords": [
+        "离职交接",
+        "5项"
+      ],
+      "type": "paraphrase",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 8.4,
+      "top_sources": [
+        "员工手册.docx",
+        "员工手册.docx",
+        "客户案例集.pdf"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-14",
+      "question": "出差想坐得舒服些，什么条件可以升舱？",
+      "sources": [
+        "报销与差旅制度.pdf"
+      ],
+      "keywords": [
+        "商务舱",
+        "VP"
+      ],
+      "type": "paraphrase",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 9.0,
+      "top_sources": [
+        "报销与差旅制度.pdf",
+        "IT运维手册.md",
+        "员工手册.docx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-15",
+      "question": "新人入职后由谁带教，带教多长时间？",
+      "sources": [
+        "新人培训.pptx"
+      ],
+      "keywords": [
+        "导师制",
+        "3个月"
+      ],
+      "type": "paraphrase",
+      "note": "",
+      "hit": true,
+      "hit_rank": 5,
+      "rr": 0.2,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 4,
+      "latency_ms": 10.6,
+      "top_sources": [
+        "员工手册.docx",
+        "信息安全规范.md",
+        "IT运维手册.md"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-16",
+      "question": "报销时限",
+      "sources": [
+        "报销与差旅制度.pdf"
+      ],
+      "keywords": [
+        "报销时限"
+      ],
+      "type": "short",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 7.2,
+      "top_sources": [
+        "报销与差旅制度.pdf",
+        "员工手册.docx",
+        "IT运维手册.md"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-17",
+      "question": "试用期多久",
+      "sources": [
+        "员工手册.docx"
+      ],
+      "keywords": [
+        "3个月"
+      ],
+      "type": "short",
+      "note": "",
+      "hit": true,
+      "hit_rank": 3,
+      "rr": 0.3333,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 2,
+      "latency_ms": 6.6,
+      "top_sources": [
+        "新人培训.pptx",
+        "员工手册.docx",
+        "员工手册.docx"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-18",
+      "question": "值班补贴多少",
+      "sources": [
+        "IT运维手册.md"
+      ],
+      "keywords": [
+        "200元"
+      ],
+      "type": "short",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 8.6,
+      "top_sources": [
+        "IT运维手册.md",
+        "报销与差旅制度.pdf",
+        "报销与差旅制度.pdf"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-19",
+      "question": "密码多久更换",
+      "sources": [
+        "信息安全规范.md"
+      ],
+      "keywords": [
+        "90天"
+      ],
+      "type": "short",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 7.5,
+      "top_sources": [
+        "信息安全规范.md",
+        "新人培训.pptx",
+        "产品FAQ.txt"
+      ],
+      "error": ""
+    },
+    {
+      "id": "case-20",
+      "question": "SLA多少",
+      "sources": [
+        "产品FAQ.txt"
+      ],
+      "keywords": [
+        "99.95%"
+      ],
+      "type": "short",
+      "note": "",
+      "hit": true,
+      "hit_rank": 1,
+      "rr": 1.0,
+      "kw_hit": true,
+      "kw_rank": 1,
+      "kw_rr": 1.0,
+      "source_hit": true,
+      "source_rank": 1,
+      "latency_ms": 11.0,
+      "top_sources": [
+        "产品FAQ.txt",
+        "新人培训.pptx",
+        "产品FAQ.txt"
+      ],
+      "error": ""
+    }
+  ]
+}
